@@ -1,0 +1,188 @@
+[gd_scene load_steps=18 format=3 uid="uid://bdwo7t22wx702"]
+
+[ext_resource type="Texture2D" uid="uid://ccdqtsqh6nhtk" path="res://assets/character sprites/tribe1.png" id="1_vsp63"]
+[ext_resource type="Texture2D" uid="uid://uvimy1j4x7n2" path="res://assets/character sprites/tribe2 (1).png" id="2_b686c"]
+[ext_resource type="Texture2D" uid="uid://chhmb38e277sv" path="res://assets/character sprites/tribe3.png" id="3_hb504"]
+[ext_resource type="Texture2D" uid="uid://bwqw6a7jx77mx" path="res://assets/level backgrounds/forest/forest_bg.png" id="4_ee6o4"]
+[ext_resource type="Texture2D" uid="uid://cwqqei3esc6vq" path="res://assets/character sprites/trip2.png" id="5_4cobl"]
+[ext_resource type="Texture2D" uid="uid://uo156ydcwm2e" path="res://assets/character sprites/Player1.png" id="6_ln7ps"]
+[ext_resource type="Texture2D" uid="uid://bhxa8k1i3ypd" path="res://assets/character sprites/Player2.png" id="7_pxxsx"]
+[ext_resource type="Texture2D" uid="uid://bsxoxhjy2pok6" path="res://assets/character sprites/Player3.png" id="8_u8s88"]
+[ext_resource type="Texture2D" uid="uid://be7dwyv18eecf" path="res://assets/character sprites/trip.png" id="9_dxwpq"]
+[ext_resource type="Texture2D" uid="uid://sgkg17sc568b" path="res://assets/character sprites/tribe21.png" id="10_mhvfb"]
+[ext_resource type="Texture2D" uid="uid://cpl2ckbn7tr8l" path="res://assets/character sprites/tribe2.png" id="11_5e03w"]
+[ext_resource type="Texture2D" uid="uid://cvqv3q43j1wwy" path="res://assets/character sprites/tribe31.png" id="12_leid8"]
+[ext_resource type="Texture2D" uid="uid://ccjqe8qxp7ew6" path="res://assets/ui/note_ui.png" id="13_8bboj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jucfl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4cobl")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ln7ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pxxsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u8s88")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4cobl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dxwpq")
+}],
+"loop": true,
+"name": &"trip",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q52ks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vsp63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b686c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hb504")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdpby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_mhvfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5e03w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_leid8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5e03w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_58yx1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_leid8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5e03w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mhvfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5e03w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(567, 149)
+texture = ExtResource("4_ee6o4")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(565, 208)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_jucfl")
+frame_progress = 0.76423067
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+
+[node name="Monster1" type="CharacterBody2D" parent="."]
+position = Vector2(562, 94)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Monster1"]
+position = Vector2(0, 3)
+sprite_frames = SubResource("SpriteFrames_q52ks")
+frame_progress = 0.37828034
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monster1"]
+
+[node name="Monster2" type="CharacterBody2D" parent="."]
+position = Vector2(513, 108)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Monster2"]
+position = Vector2(0, 3)
+sprite_frames = SubResource("SpriteFrames_jdpby")
+frame_progress = 0.9935292
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monster2"]
+root_node = NodePath("../../Monster2")
+
+[node name="Monster3" type="CharacterBody2D" parent="."]
+position = Vector2(614, 115)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Monster3"]
+position = Vector2(0, -3)
+sprite_frames = SubResource("SpriteFrames_58yx1")
+frame_progress = 0.27370745
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monster3"]
+root_node = NodePath("../../Monster3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NotebookTexture" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -153.5
+offset_top = -185.0
+offset_right = 527.5
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("13_8bboj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/NotebookTexture"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(567, 224)
