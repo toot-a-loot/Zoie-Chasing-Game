@@ -1,9 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1769890420
+::res://::1769896586
 icon.svg::CompressedTexture2D::8793512942457424945::1769889990::1769890420::1::::<><><>0<>0<>dc09a658d229e3e614f9321d4d46b3f8<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://assets/::1769890553
+::res://assets/::1769897315
 game_logo.png::CompressedTexture2D::496477715045067824::1769890513::1769890642::1::::<><><>0<>0<>6480a434b4e8babbb61dc6345423874f<>res://.godot/imported/game_logo.png-4c00206f969a34fb07f120fc53f4f241.ctex::
-::res://assets/character sprites/::1769890549
+Grabber.png::CompressedTexture2D::697209046287058694::1769897315::1769897315::1::::<><><>0<>0<>0fde0d4e15e8b3d11c094256448a8917<>res://.godot/imported/Grabber.png-7152a0479a3371951ba904785dc06e88.ctex::
+::res://assets/character sprites/::1769890649
 mask.png::CompressedTexture2D::1797487336714807804::1769890515::1769890649::1::::<><><>0<>0<>1bafdf87354d5e770d84b1728e1104ac<>res://.godot/imported/mask.png-e040a8d2eff89a0f422c3d39fe7fa3f1.ctex::
 Player1.png::CompressedTexture2D::1434312042385578362::1769890515::1769890649::1::::<><><>0<>0<>c82672b2723b4d3ac9df4ebc74169d7f<>res://.godot/imported/Player1.png-8a122a75b1fe3ddcf1699632fb5f4b6c.ctex::
 Player2.png::CompressedTexture2D::86037728661818881::1769890515::1769890649::1::::<><><>0<>0<>4df0981df3db85e23b2a0f84091974bf<>res://.godot/imported/Player2.png-7dc5decd83b6156521cdb251478f79cf.ctex::
@@ -17,11 +18,11 @@ tribe31.png::CompressedTexture2D::6281163073385468796::1769890515::1769890649::1
 tribe.png::CompressedTexture2D::5227681468652968719::1769890515::1769890649::1::::<><><>0<>0<>002a1f36062a3d146b378e6aacf37317<>res://.godot/imported/tribe.png-d6698cd0a75133f2060c7faaa69d1d11.ctex::
 trip2.png::CompressedTexture2D::6351005050194989702::1769890514::1769890649::1::::<><><>0<>0<>e140f744655745618801faaa19002e01<>res://.godot/imported/trip2.png-2a96fa64f52f9400abf370c4d861fe25.ctex::
 trip.png::CompressedTexture2D::2733458879046228745::1769890514::1769890649::1::::<><><>0<>0<>c6e6d8335258906a8a420058b4ba3f46<>res://.godot/imported/trip.png-c453726076d937405635ee0bab9479e4.ctex::
-::res://assets/food items/::1769890549
+::res://assets/food items/::1769890649
 cassavacake.png::CompressedTexture2D::3133014528992612504::1769890515::1769890649::1::::<><><>0<>0<>d6556c2ccb3eaa824520ad363d215e1c<>res://.godot/imported/cassavacake.png-9d3639442e0572124d726f18e0dfcfd5.ctex::
 kalamay.png::CompressedTexture2D::1144579532770273376::1769890515::1769890649::1::::<><><>0<>0<>320ac1b658898f86dd0b7fb81aab4901<>res://.godot/imported/kalamay.png-443da955f56840e3ce002190c49dbba5.ctex::
 puto.png::CompressedTexture2D::7054636810778837692::1769890515::1769890649::1::::<><><>0<>0<>09890756bcf8d3fe85b67229d000a568<>res://.godot/imported/puto.png-1231a154e504dabf234ebd7766dba0b1.ctex::
-::res://assets/Game Over Screen Frames For Animation/::1769890551
+::res://assets/Game Over Screen Frames For Animation/::1769890652
 gameover_00000.png::CompressedTexture2D::4086012438290484383::1769890529::1769890649::1::::<><><>0<>0<>fb310971d36422f13e7873f3bdf11ad6<>res://.godot/imported/gameover_00000.png-2ce1871c6e9d69d27ad1b4da8a2f6df9.ctex::
 gameover_00001.png::CompressedTexture2D::5435772556784224179::1769890528::1769890649::1::::<><><>0<>0<>bf9448d35f6c98d4d2a3d59f30a48ce5<>res://.godot/imported/gameover_00001.png-8c4307b154a069fe87f613854821a13b.ctex::
 gameover_00002.png::CompressedTexture2D::3035478901274721835::1769890529::1769890649::1::::<><><>0<>0<>d8100644b81dcb45aa067620edffb504<>res://.godot/imported/gameover_00002.png-f90db58520fb24814f78c21a0fb8df7d.ctex::
@@ -263,7 +264,7 @@ gameover_00237.png::CompressedTexture2D::5559197570310865681::1769890519::176989
 gameover_00238.png::CompressedTexture2D::8026813251572799667::1769890519::1769890642::1::::<><><>0<>0<>f84536e289834ad6acdce480e804018b<>res://.godot/imported/gameover_00238.png-0511f8f2109c72b43df3e4cb04f28c1d.ctex::
 gameover_00239.png::CompressedTexture2D::6523456596680120485::1769890518::1769890642::1::::<><><>0<>0<>fa89c791c8d62d69cfe580a2dcae94e1<>res://.godot/imported/gameover_00239.png-bf722776c7c28abee61f709e84d916c0.ctex::
 ::res://assets/level backgrounds/::1769890552
-::res://assets/level backgrounds/beach_/::1769890552
+::res://assets/level backgrounds/beach_/::1769890646
 beach_end-0001.png::CompressedTexture2D::120424636220655285::1769890513::1769890642::1::::<><><>0<>0<>7f5be1aff9fcea249933287e1bc33634<>res://.godot/imported/beach_end-0001.png-6116dc628bf4c2d2614b2687991ca7aa.ctex::
 beach_end-0002.png::CompressedTexture2D::8890663219662547567::1769890513::1769890642::1::::<><><>0<>0<>d97380545e91f8421d7cb9a6c180552b<>res://.godot/imported/beach_end-0002.png-64ac1d56afa63e898f6fa3344b3c1f7d.ctex::
 beach_end-0003.png::CompressedTexture2D::4079652453874517786::1769890513::1769890642::1::::<><><>0<>0<>453d667666b164089e4eb6f1a065252d<>res://.godot/imported/beach_end-0003.png-b5cf301cdacb860fffd34aee7798aa1a.ctex::
@@ -304,9 +305,15 @@ beach_start-0017.png::CompressedTexture2D::8681239809346107968::1769890514::1769
 beach_start-0018.png::CompressedTexture2D::8890796404668286037::1769890514::1769890646::1::::<><><>0<>0<>93b18ce4c85da7790c149ff5218bcdce<>res://.godot/imported/beach_start-0018.png-c1fe9a88f7ae0fd1a275d410ff60b015.ctex::
 beach_start-0019.png::CompressedTexture2D::4829422019203016872::1769890514::1769890646::1::::<><><>0<>0<>4d718e315bb3adcd9d397b9528007ccd<>res://.godot/imported/beach_start-0019.png-f81c28aec070c8cce70bc69a1713e8c9.ctex::
 beach_start-0020.png::CompressedTexture2D::4519608062034678185::1769890514::1769890646::1::::<><><>0<>0<>6da3cbecf36cf172e923c87c11fe6f50<>res://.godot/imported/beach_start-0020.png-82c78e4fbba04732d1311686b63bf533.ctex::
-::res://assets/level backgrounds/forest/::1769890552
+::res://assets/level backgrounds/forest/::1769890646
 forest_bg.png::CompressedTexture2D::3964996471121374911::1769890513::1769890646::1::::<><><>0<>0<>a9b142cb9681eda03970b6e5fe679946<>res://.godot/imported/forest_bg.png-6db52d69c01341dce9f0e3061c6a8b62.ctex::
-::res://assets/tripping frames of animation/::1769890553
+::res://assets/Pixelify_Sans/::1769896628
+PixelifySans-Bold.ttf::FontFile::7839939171891375520::1769896298::1769896628::1::::<><><>0<>0<>54acc51ae7ce54aad3a1189e784dd505<>res://.godot/imported/PixelifySans-Bold.ttf-81a500ae9afd93af992ba2c0507332dd.fontdata::
+PixelifySans-Medium.ttf::FontFile::1806748367735090369::1769896298::1769896628::1::::<><><>0<>0<>a1d5531ef20cede70ad912cc7e0888bc<>res://.godot/imported/PixelifySans-Medium.ttf-945c42147745986db275720c59e8f4bf.fontdata::
+PixelifySans-Regular.ttf::FontFile::7239568976880890105::1769896298::1769896628::1::::<><><>0<>0<>580748c9b1a78aef61a8857886621499<>res://.godot/imported/PixelifySans-Regular.ttf-b4664bd814faf7d61e4afbd84aac5f04.fontdata::
+PixelifySans-SemiBold.ttf::FontFile::537044078515338876::1769896298::1769896628::1::::<><><>0<>0<>5243d7d2db313c8105cab5df6e2d0efb<>res://.godot/imported/PixelifySans-SemiBold.ttf-a59b9e65a95516211e3d46a5d3e00651.fontdata::
+PixelifySans-VariableFont_wght.ttf::FontFile::705765115464920697::1769896298::1769896628::1::::<><><>0<>0<>cb57a2aa2dbaa3fab06607236441477e<>res://.godot/imported/PixelifySans-VariableFont_wght.ttf-82ee4658ebb7a44d6d191e360cf507d4.fontdata::
+::res://assets/tripping frames of animation/::1769890646
 tripping_00000.png::CompressedTexture2D::2731415871768946750::1769890518::1769890646::1::::<><><>0<>0<>df6d99eb706b58f81eb653d79402001b<>res://.godot/imported/tripping_00000.png-e4092afb3871eb3387c1947bb71f7ed5.ctex::
 tripping_00001.png::CompressedTexture2D::8120256969173884746::1769890518::1769890646::1::::<><><>0<>0<>9ea451492c42e9fe26e148b43622052b<>res://.godot/imported/tripping_00001.png-38348c517cc7a4959570ebdf879232f8.ctex::
 tripping_00002.png::CompressedTexture2D::822371821815832761::1769890518::1769890645::1::::<><><>0<>0<>933c8f0eb89217eb79d08d9f83ed1274<>res://.godot/imported/tripping_00002.png-2c73de55303b10a8ea0eb24071f3925d.ctex::
@@ -386,16 +393,26 @@ tripping_00075.png::CompressedTexture2D::6370968404404412102::1769890516::176989
 tripping_00076.png::CompressedTexture2D::7412537054463040274::1769890515::1769890645::1::::<><><>0<>0<>9a62642b505c752131f7b6c6420cd2b6<>res://.godot/imported/tripping_00076.png-aa774b0530c83335b19cf171b6d79d52.ctex::
 tripping_00077.png::CompressedTexture2D::8999889367392943017::1769890517::1769890645::1::::<><><>0<>0<>930c2d1190e0f4745bc27adafd29c1c6<>res://.godot/imported/tripping_00077.png-18d1217b6a3e2d6556740b55d40b9293.ctex::
 tripping_00078.png::CompressedTexture2D::8737700535729297211::1769890516::1769890645::1::::<><><>0<>0<>af60f49953a85cf8e6a1fc670290f830<>res://.godot/imported/tripping_00078.png-30d54d66f4e7e7b32d88a5b65c1f3962.ctex::
-::res://assets/ui/::1769890553
+::res://assets/ui/::1769897250
 Background.png::CompressedTexture2D::4828862625738278924::1769890515::1769890645::1::::<><><>0<>0<>cd4b4b713e4d46a75fbd5a611eb8c8b9<>res://.godot/imported/Background.png-43aaa8521cd0d4776a642d06ef29bd5a.ctex::
-EXIT BUTTON.png::CompressedTexture2D::8868692401053018968::1769890515::1769890645::1::::<><><>0<>0<>e862929c08d1e79c137bd28259d412bc<>res://.godot/imported/EXIT BUTTON.png-c66c8997d866430bb2104007dcfb6f56.ctex::
+EXIT BUTTON.png::CompressedTexture2D::8868692401053018968::1769895279::1769895295::1::::<><><>0<>0<>e862929c08d1e79c137bd28259d412bc<>res://.godot/imported/EXIT BUTTON.png-c66c8997d866430bb2104007dcfb6f56.ctex::
 note_dirty_ui.png::CompressedTexture2D::5654742954326201853::1769890515::1769890645::1::::<><><>0<>0<>ae7af3a54db87bb37848a7f5a8e25705<>res://.godot/imported/note_dirty_ui.png-3d90b139d305853464976f71720a4632.ctex::
-note_ui.png::CompressedTexture2D::4932778828562436203::1769890515::1769890645::1::::<><><>0<>0<>02e94113118e70a3c7f42b295c86239a<>res://.godot/imported/note_ui.png-7b4db5729e28acb2826f518c4cef51ed.ctex::
-OPTIONS BUTTON.png::CompressedTexture2D::6862820568682543411::1769890515::1769890645::1::::<><><>0<>0<>4412fe23850e9eb8304814e23c3a0512<>res://.godot/imported/OPTIONS BUTTON.png-e2f593d746988992cd25c5d8bd74da59.ctex::
-PLAY BUTTON.png::CompressedTexture2D::1674110994590231427::1769890515::1769890645::1::::<><><>0<>0<>e54baf92f94f2cbae6fa9eddbc7b68dc<>res://.godot/imported/PLAY BUTTON.png-b4018592130c6dba59df7da0780f07e5.ctex::
+note_ui.png::CompressedTexture2D::4932778828562436203::1769896180::1769896209::1::::<><><>0<>0<>02e94113118e70a3c7f42b295c86239a<>res://.godot/imported/note_ui.png-7b4db5729e28acb2826f518c4cef51ed.ctex::
+OPTIONS BUTTON.png::CompressedTexture2D::6862820568682543411::1769895245::1769895295::1::::<><><>0<>0<>4412fe23850e9eb8304814e23c3a0512<>res://.godot/imported/OPTIONS BUTTON.png-e2f593d746988992cd25c5d8bd74da59.ctex::
+PLAY BUTTON.png::CompressedTexture2D::1674110994590231427::1769895216::1769895295::1::::<><><>0<>0<>e54baf92f94f2cbae6fa9eddbc7b68dc<>res://.godot/imported/PLAY BUTTON.png-b4018592130c6dba59df7da0780f07e5.ctex::
+::res://assets/ui/OPTIONS/::1769897267
+Grabber.png::CompressedTexture2D::4017955081280119415::1769897226::1769897267::1::::<><><>0<>0<>8e95bed9fcb4317a4eac74d8f0f5179e<>res://.godot/imported/Grabber.png-dc4a0d2094def7d749afc3068ba69cfe.ctex::
 ::res://assets/Videos/::1769890553
-::res://core/::1769890282
-::res://entities/::1769890287
-::res://game/::1769890291
-::res://shaders/::1769890321
-::res://ui/::1769890299
+::res://core/::1769893715
+::res://entities/::1769894051
+::res://entities/Monsters/::1769894073
+monster_1.tscn::PackedScene::5024015516476943443::1769894053::0::1::::<><><>0<>0<><>::uid://ccdqtsqh6nhtk::::res://assets/character sprites/tribe1.png<>uid://uvimy1j4x7n2::::res://assets/character sprites/tribe2 (1).png<>uid://chhmb38e277sv::::res://assets/character sprites/tribe3.png
+monster_2.tscn::PackedScene::2128032295154999525::1769894062::0::1::::<><><>0<>0<><>::uid://sgkg17sc568b::::res://assets/character sprites/tribe21.png<>uid://cpl2ckbn7tr8l::::res://assets/character sprites/tribe2.png<>uid://cvqv3q43j1wwy::::res://assets/character sprites/tribe31.png
+monster_3.tscn::PackedScene::1411128146775437136::1769894073::0::1::::<><><>0<>0<><>::uid://cvqv3q43j1wwy::::res://assets/character sprites/tribe31.png<>uid://cpl2ckbn7tr8l::::res://assets/character sprites/tribe2.png<>uid://sgkg17sc568b::::res://assets/character sprites/tribe21.png
+::res://entities/Player/::1769893953
+player.tscn::PackedScene::8833222885825829458::1769893953::0::1::::<><><>0<>0<><>::uid://cwqqei3esc6vq::::res://assets/character sprites/trip2.png<>uid://uo156ydcwm2e::::res://assets/character sprites/Player1.png<>uid://bhxa8k1i3ypd::::res://assets/character sprites/Player2.png<>uid://bsxoxhjy2pok6::::res://assets/character sprites/Player3.png<>uid://be7dwyv18eecf::::res://assets/character sprites/trip.png
+::res://game/::1769894119
+game.tscn::PackedScene::2643311749410670117::1769894119::0::1::::<><><>0<>0<><>::uid://dx345jjqh08n3::::res://entities/Player/player.tscn<>uid://cdtw2itw1uqj8::::res://entities/Monsters/monster_1.tscn<>uid://bwqw6a7jx77mx::::res://assets/level backgrounds/forest/forest_bg.png<>uid://5k3m7orbxbld::::res://entities/Monsters/monster_2.tscn<>uid://udtcsatn72qu::::res://entities/Monsters/monster_3.tscn<>uid://ccjqe8qxp7ew6::::res://assets/ui/note_ui.png
+::res://shaders/::1769893724
+::res://ui/::1769897064
+main_menu.tscn::PackedScene::7525076267797246518::1769897064::0::1::::<><><>0<>0<><>::uid://ca2ewrg5t68t1::::res://assets/ui/Background.png<>uid://hcq6eicyp745::::res://assets/game_logo.png<>uid://x37mmgvco24n::::res://assets/ui/PLAY BUTTON.png<>uid://c41nwf271vcit::::res://assets/ui/OPTIONS BUTTON.png<>uid://dymcck0ecvxk7::::res://assets/ui/EXIT BUTTON.png<>uid://ccjqe8qxp7ew6::::res://assets/ui/note_ui.png<>uid://dbe5v4xvw3qtt::::res://assets/Pixelify_Sans/PixelifySans-Regular.ttf
