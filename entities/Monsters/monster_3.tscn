@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://udtcsatn72qu"]
+
+[ext_resource type="Texture2D" uid="uid://cvqv3q43j1wwy" path="res://assets/character sprites/tribe31.png" id="1_14o60"]
+[ext_resource type="Texture2D" uid="uid://cpl2ckbn7tr8l" path="res://assets/character sprites/tribe2.png" id="2_mxl0v"]
+[ext_resource type="Texture2D" uid="uid://sgkg17sc568b" path="res://assets/character sprites/tribe21.png" id="3_bkyb6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_58yx1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_14o60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mxl0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bkyb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mxl0v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Monster3" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -3)
+sprite_frames = SubResource("SpriteFrames_58yx1")
+frame_progress = 0.27370745
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../../Monster3")
