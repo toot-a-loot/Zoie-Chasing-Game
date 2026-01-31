@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://jw2rxjv2lj4f"]
+
+[ext_resource type="Script" uid="uid://c2mvu1aeht3q2" path="res://core/word_generator/word_gen.gd" id="1_2qxmy"]
+
+[node name="WordGen" type="MarginContainer"]
+script = ExtResource("1_2qxmy")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
