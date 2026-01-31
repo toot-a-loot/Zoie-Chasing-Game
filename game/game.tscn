@@ -1,50 +1,60 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdwo7t22wx702"]
+[gd_scene load_steps=9 format=3 uid="uid://bdwo7t22wx702"]
 
+[ext_resource type="Script" uid="uid://ciqnwuwxjnge1" path="res://game/game.gd" id="1_u5opy"]
 [ext_resource type="PackedScene" uid="uid://dx345jjqh08n3" path="res://entities/Player/player.tscn" id="2_dakft"]
 [ext_resource type="PackedScene" uid="uid://cdtw2itw1uqj8" path="res://entities/Monsters/monster_1.tscn" id="3_u5opy"]
 [ext_resource type="Texture2D" uid="uid://bwqw6a7jx77mx" path="res://assets/level backgrounds/forest/forest_bg.png" id="4_ee6o4"]
 [ext_resource type="PackedScene" uid="uid://5k3m7orbxbld" path="res://entities/Monsters/monster_2.tscn" id="4_y36n6"]
 [ext_resource type="PackedScene" uid="uid://udtcsatn72qu" path="res://entities/Monsters/monster_3.tscn" id="5_l8g03"]
+[ext_resource type="PackedScene" uid="uid://jw2rxjv2lj4f" path="res://core/word_generator/word_gen.tscn" id="8_y36n6"]
 [ext_resource type="Texture2D" uid="uid://ccjqe8qxp7ew6" path="res://assets/ui/note_ui.png" id="13_8bboj"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_u5opy")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(567, 149)
+position = Vector2(320, 720)
 texture = ExtResource("4_ee6o4")
 
 [node name="Player" parent="." instance=ExtResource("2_dakft")]
-position = Vector2(565, 208)
+position = Vector2(315, 172)
 
 [node name="Monster1" parent="." instance=ExtResource("3_u5opy")]
-position = Vector2(562, 94)
+position = Vector2(312, 58)
 
 [node name="Monster2" parent="." instance=ExtResource("4_y36n6")]
-position = Vector2(513, 108)
+position = Vector2(263, 72)
 
 [node name="Monster3" parent="." instance=ExtResource("5_l8g03")]
-position = Vector2(614, 115)
+position = Vector2(364, 79)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="NotebookTexture" type="TextureRect" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.45200002
-anchor_top = 0.595
-anchor_right = 0.45200002
-anchor_bottom = 0.595
-offset_left = -339.56006
-offset_top = -230.04004
-offset_right = 341.43994
-offset_bottom = 179.95996
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -153.5
+offset_top = -175.0
+offset_right = 153.5
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("13_8bboj")
+metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/NotebookTexture"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/NotebookTexture"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(567, 224)
+[node name="WordGen" parent="CanvasLayer/NotebookTexture/CenterContainer" instance=ExtResource("8_y36n6")]
+layout_mode = 2
