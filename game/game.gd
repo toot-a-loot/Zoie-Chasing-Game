@@ -8,6 +8,9 @@ extends Node
 @onready var music_player = $MusicPlayer
 @onready var correct_sfx = $CorrectSfx
 @onready var wrong_sfx = $WrongSfx
+@onready var trip_sfx = $TripSfx
+@onready var running_sfx = $RunningSfx
+@onready var type_sfx = $TypeSfx
 @export var monster_start_y: float = 60.0
 @export var monster_catch_y: float = 140.0
 @export var chase_smoothness: float = 0.1
@@ -34,9 +37,10 @@ func _ready():
 			monster_sprite.play("default")
 	
 	music_player.play()
+	running_sfx.play()
 
 func _unhandled_input(event):
-	if word_gen.is_game_active == false:
+	if not word_gen.is_game_active:
 		return
 
 	if event is InputEventKey and event.pressed and not event.echo:
@@ -48,7 +52,12 @@ func _unhandled_input(event):
 			
 			if status == 1:
 				word_gen.on_word_typed_correctly()
-				correct_sfx.play()
+				correct_sfx.play() 
+				
+			elif status == 0: 
+				type_sfx.pitch_scale = randf_range(0.9, 1.1)
+				type_sfx.play()
+				
 			elif status == -1:
 				word_gen.punish_player()
 				wrong_sfx.play()
@@ -56,6 +65,7 @@ func _unhandled_input(event):
 # --- ANIMATION LOGIC ---
 
 func play_trip_animation():
+	running_sfx.stop()
 	# If we are already tripping or dying, ignore new trip requests.
 	if player_sprite.animation == "trip" and player_sprite.is_playing():
 		return
@@ -68,6 +78,9 @@ func play_trip_animation():
 	var tween = create_tween()
 	tween.tween_property(notebook, "position:y", notebook.position.y + 10, 0.05)
 	tween.tween_property(notebook, "position:y", notebook.position.y, 0.05)
+	
+	trip_sfx.play()
+	running_sfx.play()
 
 func _on_animation_finished():
 	# If trip finished, go back to running (unless we are dead)
