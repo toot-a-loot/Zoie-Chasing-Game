@@ -1,5 +1,8 @@
 extends MarginContainer
 
+signal mistake_happened
+signal game_ended
+
 var word_scene = preload("res://core/word_generator/word.tscn")
 @onready var death_timer = $Timer
 
@@ -64,14 +67,15 @@ func spawn_next_word():
 		death_timer.start()
 
 func _on_timer_timeout():
-	# 4. UPDATED: Handle Game Over logic
+	# 1. Stop the game logic
 	is_game_active = false
-	print("TIMEOUT! Final Time: 0.00")
 	print("GAME OVER")
 	
-	# Optional: Destroy the current word so they can't type anymore
+	# 2. Cleanup
 	if current_word_node != null:
 		current_word_node.queue_free()
+		
+	game_ended.emit()
 
 func on_word_typed_correctly():
 	if is_game_active:
@@ -82,11 +86,11 @@ func on_word_typed_correctly():
 		death_timer.start()
 
 func punish_player():
-	# 3. UPDATED: Apply penalty and print the timer
 	if not is_game_active: return
 	
-	var new_time = death_timer.time_left - penalty_amount
+	mistake_happened.emit()
 	
+	var new_time = death_timer.time_left - penalty_amount
 	print("WRONG LETTER! Penalty applied. Time left: %.2f" % new_time)
 
 	if new_time <= 0:
