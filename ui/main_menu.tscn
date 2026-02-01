@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dfhg53fcfgcqo"]
+[gd_scene load_steps=14 format=3 uid="uid://d1hok520xf1in"]
 
 [ext_resource type="Texture2D" uid="uid://ca2ewrg5t68t1" path="res://assets/ui/Background.png" id="1_0dkrt"]
 [ext_resource type="Script" uid="uid://j47t0gok7mva" path="res://ui/main_menu.gd" id="1_arv2f"]
@@ -45,7 +45,6 @@ grow_vertical = 2
 script = ExtResource("1_arv2f")
 
 [node name="MainMenuContainer" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -68,24 +67,19 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -320.0
+offset_top = -50.0
 offset_right = 320.0
-offset_bottom = 360.0
+offset_bottom = 310.0
 grow_horizontal = 2
 texture = ExtResource("2_wk0pr")
 
 [node name="Main" type="VBoxContainer" parent="MainMenuContainer"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.68
-anchor_right = 0.5
-anchor_bottom = 0.68
-offset_left = -98.0
-offset_top = -151.0
-offset_right = 98.0
-offset_bottom = 151.00006
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_left = 279.0
+offset_top = 215.0
+offset_right = 475.0
+offset_bottom = 517.0006
+scale = Vector2(0.48, 0.48)
 
 [node name="TextureButton" type="TextureButton" parent="MainMenuContainer/Main"]
 layout_mode = 2
@@ -101,6 +95,7 @@ layout_mode = 2
 texture_normal = ExtResource("5_ei257")
 
 [node name="SettingsContainer" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -124,13 +119,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -501.0
-offset_top = -302.0
-offset_right = 501.0
-offset_bottom = 302.0
+offset_left = -345.0
+offset_top = -205.0
+offset_right = 345.0
+offset_bottom = 205.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_ei257")
+expand_mode = 1
 
 [node name="SettingsLabel" type="Label" parent="SettingsContainer/TextureRect"]
 layout_mode = 1
@@ -140,8 +136,9 @@ anchor_top = 0.2
 anchor_right = 0.5
 anchor_bottom = 0.2
 offset_left = -143.5
-offset_right = 143.5
-offset_bottom = 157.0
+offset_top = -7.0
+offset_right = 134.5
+offset_bottom = 150.0
 grow_horizontal = 2
 text = "Settings
 "
@@ -149,17 +146,11 @@ label_settings = SubResource("LabelSettings_ubpvv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SettingsContainer/TextureRect"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -93.0
-offset_top = -88.5
-offset_right = 93.0
-offset_bottom = 88.5
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 89.0
+offset_top = 158.645
+offset_right = 735.0
+offset_bottom = 364.64502
+scale = Vector2(0.8, 0.8)
 
 [node name="MusicContainer" type="HBoxContainer" parent="SettingsContainer/TextureRect/VBoxContainer"]
 layout_mode = 2
@@ -208,22 +199,21 @@ value = 1.0
 [node name="BackButton" type="Button" parent="SettingsContainer/TextureRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.802
-anchor_top = 0.803
-anchor_right = 0.88600004
-anchor_bottom = 0.859
-offset_left = -8.0
-offset_top = -4.011963
-offset_right = 5.2279663
-offset_bottom = 3.1640015
+anchor_left = 0.779
+anchor_top = 0.802
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.227966
+offset_top = -8.0
 grow_horizontal = 0
 grow_vertical = 0
 flat = true
 
 [node name="BackLabel" type="Label" parent="SettingsContainer/TextureRect/BackButton"]
 layout_mode = 0
-offset_right = 94.0
-offset_bottom = 101.0
-text = "Back
-"
+offset_left = -16.380005
+offset_top = -20.218018
+offset_right = 77.619995
+offset_bottom = 80.78198
+text = "Back"
 label_settings = SubResource("LabelSettings_arv2f")
