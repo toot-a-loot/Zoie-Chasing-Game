@@ -19,14 +19,14 @@ texture = ExtResource("4_ee6o4")
 [node name="Player" parent="." instance=ExtResource("2_dakft")]
 position = Vector2(315, 172)
 
-[node name="Monster1" parent="." instance=ExtResource("3_u5opy")]
-position = Vector2(312, 58)
-
 [node name="Monster2" parent="." instance=ExtResource("4_y36n6")]
 position = Vector2(263, 72)
 
 [node name="Monster3" parent="." instance=ExtResource("5_l8g03")]
 position = Vector2(364, 79)
+
+[node name="Monster1" parent="." instance=ExtResource("3_u5opy")]
+position = Vector2(312, 58)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -36,15 +36,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -153.5
+offset_left = -180.0
 offset_top = -175.0
-offset_right = 153.5
-offset_bottom = 10.0
+offset_right = 180.0
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("13_8bboj")
+expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/NotebookTexture"]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Zoie-Chasing-Game"
-run/main_scene="uid://dfhg53fcfgcqo"
+run/main_scene="uid://d1hok520xf1in"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,4 +19,5 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/mode=4
 window/stretch/mode="canvas_items"
