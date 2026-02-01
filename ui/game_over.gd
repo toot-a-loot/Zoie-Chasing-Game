@@ -10,10 +10,12 @@ var cursor_visible: bool = true
 
 # References
 @onready var feedback_label = $InputFeedback 
+@onready var game_over_music = $GameOverMusic
 
 func _ready():
 	$AnimationHolder/AnimatedSprite2D.play("default")
 	update_display() # Draw the initial cursor
+	game_over_music.play()
 
 func _process(delta):
 	cursor_timer += delta

@@ -217,3 +217,10 @@ offset_right = 77.619995
 offset_bottom = 80.78198
 text = "Back"
 label_settings = SubResource("LabelSettings_arv2f")
+
+[node name="FeedbackSfx" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
+bus = &"Music"

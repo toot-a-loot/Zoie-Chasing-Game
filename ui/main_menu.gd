@@ -14,6 +14,9 @@ extends Control
 @onready var music_slider = $SettingsContainer/TextureRect/VBoxContainer/MusicContainer/MusicSlider
 @onready var sfx_slider = $SettingsContainer/TextureRect/VBoxContainer/SFXContainer/SFXSlider
 
+@onready var music_player = $MusicPlayer
+@onready var feedback_sfx = $FeedbackSfx
+
 # Audio Bus Indices
 var music_bus_index
 var sfx_bus_index
@@ -45,17 +48,21 @@ func _ready():
 	if sfx_bus_index != -1:
 		sfx_slider.value = db_to_linear(AudioServer.get_bus_volume_db(sfx_bus_index))
 
+	music_player.play()
 # --- Button Functions ---
 
 func _on_start_pressed():
 	# Change to your game scene path
+	feedback_sfx.play()
 	get_tree().change_scene_to_file("res://game/game.tscn")
 
 func _on_options_pressed():
+	feedback_sfx.play()
 	main_menu_container.visible = false
 	settings_container.visible = true
 
 func _on_exit_pressed():
+	feedback_sfx.play()
 	get_tree().quit()
 
 func _on_back_pressed():
@@ -65,16 +72,19 @@ func _on_back_pressed():
 # --- Slider Functions ---
 
 func _on_music_changed(value):
+	feedback_sfx.play()
 	if music_bus_index != -1:
 		AudioServer.set_bus_volume_db(music_bus_index, linear_to_db(value))
 		AudioServer.set_bus_mute(music_bus_index, value < 0.05)
 
 func _on_sfx_changed(value):
+	feedback_sfx.play()
 	if sfx_bus_index != -1:
 		AudioServer.set_bus_volume_db(sfx_bus_index, linear_to_db(value))
 		AudioServer.set_bus_mute(sfx_bus_index, value < 0.05)
 
 func _input(event):
 	# Allow pressing ESC to go back from settings
+	feedback_sfx.play()
 	if event.is_action_pressed("ui_cancel") and settings_container.visible:
 		_on_back_pressed()

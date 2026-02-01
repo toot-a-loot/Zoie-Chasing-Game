@@ -64,3 +64,13 @@ motion_mirroring = Vector2(0, 1440)
 [node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource("4_ee6o4")
 centered = false
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
+bus = &"Music"
+
+[node name="CorrectSfx" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="WrongSfx" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"

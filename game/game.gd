@@ -5,6 +5,9 @@ extends Node
 @onready var player_sprite = player.get_node_or_null("AnimatedSprite2D")
 @onready var monsters = [$Monster1, $Monster2, $Monster3]
 @onready var parallax_bg = $ParallaxBackground 
+@onready var music_player = $MusicPlayer
+@onready var correct_sfx = $CorrectSfx
+@onready var wrong_sfx = $WrongSfx
 @export var monster_start_y: float = 60.0
 @export var monster_catch_y: float = 140.0
 @export var chase_smoothness: float = 0.1
@@ -29,6 +32,8 @@ func _ready():
 		var monster_sprite = monster.get_node_or_null("AnimatedSprite2D")
 		if monster_sprite:
 			monster_sprite.play("default")
+	
+	music_player.play()
 
 func _unhandled_input(event):
 	if word_gen.is_game_active == false:
@@ -43,8 +48,10 @@ func _unhandled_input(event):
 			
 			if status == 1:
 				word_gen.on_word_typed_correctly()
+				correct_sfx.play()
 			elif status == -1:
 				word_gen.punish_player()
+				wrong_sfx.play()
 
 # --- ANIMATION LOGIC ---
 
@@ -56,6 +63,11 @@ func play_trip_animation():
 		return
 		
 	player_sprite.play("trip")
+	
+	var notebook = $CanvasLayer/NotebookTexture
+	var tween = create_tween()
+	tween.tween_property(notebook, "position:y", notebook.position.y + 10, 0.05)
+	tween.tween_property(notebook, "position:y", notebook.position.y, 0.05)
 
 func _on_animation_finished():
 	# If trip finished, go back to running (unless we are dead)
@@ -64,6 +76,7 @@ func _on_animation_finished():
 			player_sprite.play("default")
 
 func _on_game_over():
+	music_player.stop()
 	# 2. Play death animation and wait for it
 	print("Player Died! Playing animation...")
 	
