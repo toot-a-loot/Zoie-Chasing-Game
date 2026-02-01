@@ -1,4 +1,4 @@
-[gd_scene load_steps=251 format=4 uid="uid://ofcv5dhavhxd"]
+[gd_scene load_steps=252 format=4 uid="uid://ofcv5dhavhxd"]
 
 [ext_resource type="Texture2D" uid="uid://byhka7h8nycqh" path="res://assets/Game Over Screen Frames For Animation/gameover_00000.png" id="1_aoy3h"]
 [ext_resource type="Script" uid="uid://bjjtplvqcyoru" path="res://ui/game_over.gd" id="1_tgbn0"]
@@ -242,6 +242,7 @@
 [ext_resource type="Texture2D" uid="uid://dmmipans28kvj" path="res://assets/Game Over Screen Frames For Animation/gameover_00238.png" id="239_hrg1d"]
 [ext_resource type="Texture2D" uid="uid://cy7am245xucw8" path="res://assets/Game Over Screen Frames For Animation/gameover_00239.png" id="240_tokde"]
 [ext_resource type="FontFile" uid="uid://00g48gjdqgvp" path="res://assets/Pixelify_Sans/PixelifySans-Medium.ttf" id="241_xakky"]
+[ext_resource type="AudioStream" uid="uid://hd788smpne71" path="res://assets/Music - sfx/615454__melokacool__game-over-2.wav" id="243_uwx6e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fdqfk"]
 animations = [{
@@ -1513,3 +1514,5 @@ fit_content = true
 scroll_active = false
 
 [node name="GameOverMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("243_uwx6e")
+bus = &"Music"

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b8mg2rqsjonkc"
+path="res://.godot/imported/incorrect.wav-c46631d002d8e5ae6922ed47f6f815db.sample"
+
+[deps]
+
+source_file="res://assets/Music - sfx/incorrect.wav"
+dest_files=["res://.godot/imported/incorrect.wav-c46631d002d8e5ae6922ed47f6f815db.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

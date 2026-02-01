@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3n4cig21cxfc"
+path="res://.godot/imported/ultimate-comedy-music-vol-4-by-ende-dot-app.mp3-41767cdb8a55635f99f408cda0403f34.mp3str"
+
+[deps]
+
+source_file="res://assets/Music - sfx/ultimate-comedy-music-vol-4-by-ende-dot-app.mp3"
+dest_files=["res://.godot/imported/ultimate-comedy-music-vol-4-by-ende-dot-app.mp3-41767cdb8a55635f99f408cda0403f34.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

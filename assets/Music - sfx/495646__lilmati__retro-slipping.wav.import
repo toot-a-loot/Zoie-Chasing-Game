@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://csdk0ty81ct07"
+path="res://.godot/imported/495646__lilmati__retro-slipping.wav-e443f209ad3d18c309c31e3e2137cd7b.sample"
+
+[deps]
+
+source_file="res://assets/Music - sfx/495646__lilmati__retro-slipping.wav"
+dest_files=["res://.godot/imported/495646__lilmati__retro-slipping.wav-e443f209ad3d18c309c31e3e2137cd7b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
