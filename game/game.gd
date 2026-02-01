@@ -4,6 +4,16 @@ extends Node
 @onready var player = $Player
 @onready var player_sprite = player.get_node_or_null("AnimatedSprite2D")
 @onready var monsters = [$Monster1, $Monster2, $Monster3]
+@onready var parallax_bg = $ParallaxBackground 
+@export var monster_start_y: float = 60.0
+@export var monster_catch_y: float = 140.0
+@export var chase_smoothness: float = 0.1
+@export var scroll_speed: float = -200.0 : 
+	set(value):
+		if value == null:
+			scroll_speed = -200.0
+		else:
+			scroll_speed = value
 
 func _ready():
 	# Start animation
@@ -65,3 +75,31 @@ func _on_game_over():
 		
 	# Change the scene
 	get_tree().change_scene_to_file("res://ui/game_over.tscn")
+
+# --- BACKGROUND ---
+func _process(delta):
+	if not word_gen.is_game_active:
+		return
+
+	var is_tripping = player_sprite and (player_sprite.animation == "trip" or player_sprite.animation == "death")
+
+	if not is_tripping:
+		parallax_bg.scroll_offset.y += scroll_speed * delta
+	
+	update_monster_positions(delta)
+
+func update_monster_positions(delta):
+	if not word_gen or not word_gen.death_timer: 
+		return
+	
+	var timer = word_gen.death_timer
+	
+	if not timer.is_stopped() and timer.wait_time > 0:
+		# 1. Calculate the 'Target' based on the timer 
+		var time_ratio = 1.0 - (timer.time_left / timer.wait_time) 
+		var target_y = lerp(monster_start_y, monster_catch_y, time_ratio) 
+		
+		# 2. Smoothly move each monster toward that target
+		for monster in monsters:
+			if is_instance_valid(monster):
+				monster.position.y = lerp(monster.position.y, target_y, chase_smoothness)
