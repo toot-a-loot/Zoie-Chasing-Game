@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bwqw6a7jx77mx" path="res://assets/level backgrounds/forest/forest_bg.png" id="4_ee6o4"]
 [ext_resource type="PackedScene" uid="uid://5k3m7orbxbld" path="res://entities/Monsters/monster_2.tscn" id="4_y36n6"]
 [ext_resource type="PackedScene" uid="uid://udtcsatn72qu" path="res://entities/Monsters/monster_3.tscn" id="5_l8g03"]
+[ext_resource type="Texture2D" uid="uid://nl1j5dqkaxvg" path="res://assets/food items/3.png" id="8_b686c"]
+[ext_resource type="Script" uid="uid://cuprexhcsqc1k" path="res://core/word_generator/food_gen.gd" id="8_hb504"]
 [ext_resource type="PackedScene" uid="uid://jw2rxjv2lj4f" path="res://core/word_generator/word_gen.tscn" id="8_y36n6"]
 [ext_resource type="AudioStream" uid="uid://4bj0uj2njoeb" path="res://assets/Music - sfx/50555__broumbroum__sf3-sfx-menu-back-l.wav" id="9_3vho3"]
 [ext_resource type="AudioStream" uid="uid://cafvlyg5cag5n" path="res://assets/Music - sfx/Rhinoceros.mp3" id="9_b686c"]
@@ -62,6 +64,45 @@ grow_vertical = 2
 
 [node name="WordGen" parent="CanvasLayer/NotebookTexture/CenterContainer" instance=ExtResource("8_y36n6")]
 layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer/NotebookTexture"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="FoodGen" parent="CanvasLayer/NotebookTexture/CenterContainer2" instance=ExtResource("8_y36n6")]
+layout_mode = 2
+script = ExtResource("8_hb504")
+spawn_chance = 0.2
+check_interval = 2.0
+bonus_time_amount = 2.0
+
+[node name="FoodBubble" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bubble" type="Sprite2D" parent="CanvasLayer/FoodBubble"]
+position = Vector2(367, 148)
+texture = ExtResource("8_b686c")
+
+[node name="Icon" type="TextureRect" parent="CanvasLayer/FoodBubble"]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 126.0
+offset_right = 388.0
+offset_bottom = 166.0
+expand_mode = 1
+stretch_mode = 5
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
