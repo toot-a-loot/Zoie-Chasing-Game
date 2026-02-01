@@ -11,6 +11,7 @@ extends Node
 @onready var trip_sfx = $TripSfx
 @onready var running_sfx = $RunningSfx
 @onready var type_sfx = $TypeSfx
+@onready var death_sfx = $DeathSfx
 @export var monster_start_y: float = 60.0
 @export var monster_catch_y: float = 140.0
 @export var chase_smoothness: float = 0.1
@@ -89,6 +90,7 @@ func _on_animation_finished():
 			player_sprite.play("default")
 
 func _on_game_over():
+	death_sfx.play()
 	music_player.stop()
 	# 2. Play death animation and wait for it
 	print("Player Died! Playing animation...")
