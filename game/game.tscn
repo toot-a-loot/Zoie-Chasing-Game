@@ -10,11 +10,13 @@
 [ext_resource type="Script" uid="uid://cuprexhcsqc1k" path="res://core/word_generator/food_gen.gd" id="8_hb504"]
 [ext_resource type="PackedScene" uid="uid://jw2rxjv2lj4f" path="res://core/word_generator/word_gen.tscn" id="8_y36n6"]
 [ext_resource type="AudioStream" uid="uid://4bj0uj2njoeb" path="res://assets/Music - sfx/50555__broumbroum__sf3-sfx-menu-back-l.wav" id="9_3vho3"]
+[ext_resource type="AudioStream" uid="uid://cafvlyg5cag5n" path="res://assets/Music - sfx/Rhinoceros.mp3" id="9_b686c"]
 [ext_resource type="AudioStream" uid="uid://csdk0ty81ct07" path="res://assets/Music - sfx/495646__lilmati__retro-slipping.wav" id="9_l8g03"]
 [ext_resource type="AudioStream" uid="uid://blce822q0re6w" path="res://assets/Music - sfx/575316__taure__run-road.wav" id="10_j8tme"]
 [ext_resource type="AudioStream" uid="uid://bu8hgqq7d4wiy" path="res://assets/Music - sfx/audiomass-output.wav" id="10_qf6n1"]
 [ext_resource type="AudioStream" uid="uid://b8mg2rqsjonkc" path="res://assets/Music - sfx/incorrect.wav" id="11_vsp63"]
 [ext_resource type="Texture2D" uid="uid://ccjqe8qxp7ew6" path="res://assets/ui/note_ui.png" id="13_8bboj"]
+[ext_resource type="AudioStream" uid="uid://dayuufksk35qm" path="res://assets/Music - sfx/370204__nekoninja__samurai-slash.wav" id="15_hb504"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_u5opy")
@@ -112,6 +114,8 @@ texture = ExtResource("4_ee6o4")
 centered = false
 
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_b686c")
+volume_db = -4.0
 autoplay = true
 bus = &"Music"
 
@@ -134,4 +138,8 @@ bus = &"SFX"
 [node name="RunningSfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_j8tme")
 autoplay = true
+bus = &"SFX"
+
+[node name="DeathSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_hb504")
 bus = &"SFX"

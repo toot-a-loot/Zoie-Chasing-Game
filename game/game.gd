@@ -18,6 +18,10 @@ extends Node
 @onready var wrong_sfx = $WrongSfx
 
 # --- CONFIGURATION ---
+@onready var trip_sfx = $TripSfx
+@onready var running_sfx = $RunningSfx
+@onready var type_sfx = $TypeSfx
+@onready var death_sfx = $DeathSfx
 @export var monster_start_y: float = 60.0
 @export var monster_catch_y: float = 140.0
 @export var chase_smoothness: float = 0.1
@@ -45,6 +49,7 @@ func _ready():
 			food_bubble_root.hide()
 
 	music_player.play()
+	running_sfx.play()
 
 func _on_food_consumed(amount):
 	if word_gen:
@@ -52,6 +57,7 @@ func _on_food_consumed(amount):
 
 func _unhandled_input(event):
 	if not word_gen or not word_gen.is_game_active:
+	if not word_gen.is_game_active:
 		return
 
 	if event is InputEventKey and event.pressed and not event.echo:
@@ -75,6 +81,18 @@ func _unhandled_input(event):
 			elif food_word and typed_char == food_word.target_word[0]:
 				process_food_word(typed_char)
 			else:
+		if active_word and active_word.has_method("process_input"):
+			var status = active_word.process_input(typed_char)
+			
+			if status == 1:
+				word_gen.on_word_typed_correctly()
+				correct_sfx.play() 
+				
+			elif status == 0: 
+				type_sfx.pitch_scale = randf_range(0.9, 1.1)
+				type_sfx.play()
+				
+			elif status == -1:
 				word_gen.punish_player()
 
 # --- HELPER FUNCTIONS ---
@@ -96,6 +114,22 @@ func process_food_word(char):
 func play_trip_animation():
 	if player_sprite:
 		player_sprite.play("trip")
+	running_sfx.stop()
+	# If we are already tripping or dying, ignore new trip requests.
+	if player_sprite.animation == "trip" and player_sprite.is_playing():
+		return
+	if player_sprite.animation == "death":
+		return
+		
+	player_sprite.play("trip")
+	
+	var notebook = $CanvasLayer/NotebookTexture
+	var tween = create_tween()
+	tween.tween_property(notebook, "position:y", notebook.position.y + 10, 0.05)
+	tween.tween_property(notebook, "position:y", notebook.position.y, 0.05)
+	
+	trip_sfx.play()
+	running_sfx.play()
 
 func _on_animation_finished():
 	if player_sprite.animation == "trip":
@@ -103,6 +137,7 @@ func _on_animation_finished():
 			player_sprite.play("default")
 
 func _on_game_over():
+	death_sfx.play()
 	music_player.stop()
 	if player_sprite:
 		player_sprite.play("death")

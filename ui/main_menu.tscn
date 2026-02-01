@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://ccjqe8qxp7ew6" path="res://assets/ui/note_ui.png" id="6_ei257"]
 [ext_resource type="FontFile" uid="uid://dbe5v4xvw3qtt" path="res://assets/Pixelify_Sans/PixelifySans-Regular.ttf" id="7_p8ri8"]
 [ext_resource type="Texture2D" uid="uid://j6y6wnc8itkw" path="res://assets/Grabber.png" id="8_ubpvv"]
-[ext_resource type="AudioStream" uid="uid://b3n4cig21cxfc" path="res://assets/Music - sfx/ultimate-comedy-music-vol-4-by-ende-dot-app.mp3" id="10_5klac"]
 [ext_resource type="AudioStream" uid="uid://4bj0uj2njoeb" path="res://assets/Music - sfx/50555__broumbroum__sf3-sfx-menu-back-l.wav" id="10_lsdqh"]
+[ext_resource type="AudioStream" uid="uid://l1hab6p4pqva" path="res://assets/Music - sfx/Itty Bitty 8 Bit.mp3" id="11_lsdqh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ubpvv"]
 font = ExtResource("7_p8ri8")
@@ -225,6 +225,6 @@ stream = ExtResource("10_lsdqh")
 bus = &"SFX"
 
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_5klac")
+stream = ExtResource("11_lsdqh")
 autoplay = true
 bus = &"Music"

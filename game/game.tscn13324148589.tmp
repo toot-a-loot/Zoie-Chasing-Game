@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://bdwo7t22wx702"]
+
+[ext_resource type="Script" uid="uid://ciqnwuwxjnge1" path="res://game/game.gd" id="1_u5opy"]
+[ext_resource type="PackedScene" uid="uid://dx345jjqh08n3" path="res://entities/Player/player.tscn" id="2_dakft"]
+[ext_resource type="PackedScene" uid="uid://cdtw2itw1uqj8" path="res://entities/Monsters/monster_1.tscn" id="3_u5opy"]
+[ext_resource type="Texture2D" uid="uid://bwqw6a7jx77mx" path="res://assets/level backgrounds/forest/forest_bg.png" id="4_ee6o4"]
+[ext_resource type="PackedScene" uid="uid://5k3m7orbxbld" path="res://entities/Monsters/monster_2.tscn" id="4_y36n6"]
+[ext_resource type="PackedScene" uid="uid://udtcsatn72qu" path="res://entities/Monsters/monster_3.tscn" id="5_l8g03"]
+[ext_resource type="PackedScene" uid="uid://jw2rxjv2lj4f" path="res://core/word_generator/word_gen.tscn" id="8_y36n6"]
+[ext_resource type="AudioStream" uid="uid://w6q3l04rihoh" path="res://assets/Music - sfx/Keytap/566241__jamesfarrell_97__key-clack-5.wav" id="9_3vho3"]
+[ext_resource type="AudioStream" uid="uid://csdk0ty81ct07" path="res://assets/Music - sfx/495646__lilmati__retro-slipping.wav" id="9_l8g03"]
+[ext_resource type="AudioStream" uid="uid://blce822q0re6w" path="res://assets/Music - sfx/575316__taure__run-road.wav" id="10_j8tme"]
+[ext_resource type="Texture2D" uid="uid://ccjqe8qxp7ew6" path="res://assets/ui/note_ui.png" id="13_8bboj"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_u5opy")
+
+[node name="Player" parent="." instance=ExtResource("2_dakft")]
+position = Vector2(315, 172)
+
+[node name="Monster2" parent="." instance=ExtResource("4_y36n6")]
+position = Vector2(263, 72)
+
+[node name="Monster3" parent="." instance=ExtResource("5_l8g03")]
+position = Vector2(364, 79)
+
+[node name="Monster1" parent="." instance=ExtResource("3_u5opy")]
+position = Vector2(312, 58)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NotebookTexture" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -175.0
+offset_right = 180.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("13_8bboj")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/NotebookTexture"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WordGen" parent="CanvasLayer/NotebookTexture/CenterContainer" instance=ExtResource("8_y36n6")]
+layout_mode = 2
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(0, 1440)
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("4_ee6o4")
+centered = false
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
+bus = &"Music"
+
+[node name="CorrectSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_3vho3")
+bus = &"SFX"
+
+[node name="TypeSfx" type="AudioStreamPlayer2D" parent="."]
+
+[node name="WrongSfx" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="TripSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_l8g03")
+bus = &"SFX"
+
+[node name="RunningSfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_j8tme")
+autoplay = true
+bus = &"SFX"
