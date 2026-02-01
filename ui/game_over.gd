@@ -56,9 +56,9 @@ func start_typing(word):
 
 func execute_choice():
 	if current_target_word == "YES":
-		get_tree().change_scene_to_file("res://src/levels/game.tscn")
+		get_tree().change_scene_to_file("res://game/game.tscn")
 	elif current_target_word == "NO":
-		get_tree().change_scene_to_file("res://src/ui/main_menu.tscn")
+		get_tree().change_scene_to_file("res://ui/main_menu.tscn")
 
 func reset_typing():
 	current_target_word = ""

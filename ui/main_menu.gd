@@ -49,7 +49,7 @@ func _ready():
 
 func _on_start_pressed():
 	# Change to your game scene path
-	get_tree().change_scene_to_file("res://src/levels/game.tscn")
+	get_tree().change_scene_to_file("res://game/game.tscn")
 
 func _on_options_pressed():
 	main_menu_container.visible = false

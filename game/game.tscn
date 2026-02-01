@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bdwo7t22wx702"]
 
-[ext_resource type="Script" uid="uid://ciqnwuwxjnge1" path="res://game/game.gd" id="1_u5opy"]
+[ext_resource type="Script" path="res://game/game.gd" id="1_u5opy"]
 [ext_resource type="PackedScene" uid="uid://dx345jjqh08n3" path="res://entities/Player/player.tscn" id="2_dakft"]
 [ext_resource type="PackedScene" uid="uid://cdtw2itw1uqj8" path="res://entities/Monsters/monster_1.tscn" id="3_u5opy"]
 [ext_resource type="Texture2D" uid="uid://bwqw6a7jx77mx" path="res://assets/level backgrounds/forest/forest_bg.png" id="4_ee6o4"]
